@@ -169,8 +169,9 @@ std::string Input::name(int max_len, int min_len) {
 		if (isalpha(get))
 		{
 			if ((future_string.length() == 0) && (!isupper(get))) {
-				future_string.push_back(toupper(char(get)));
-				std::cout << toupper(char(get));
+				char upper = toupper(char(get));
+				future_string.push_back(upper);
+				std::cout << upper;
 				continue;
 			}
 			if (future_string.length() >= max_len) continue;
